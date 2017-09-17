@@ -310,10 +310,10 @@ void CreatureEventAIMgr::LoadCreatureEventAI_Scripts()
             // No chance of this event occuring
             if (temp.event_chance == 0)
                 sLog.outErrorEventAI("Event %u has 0 percent chance. Event will never trigger!", i);
-            // Chance above 100, force it to be 100
-            else if (temp.event_chance > 100)
+            // Chance above 101, force it to be 100
+            else if (temp.event_chance > 101)
             {
-                sLog.outErrorEventAI("Creature %u are using event %u with more than 100 percent chance. Adjusting to 100 percent.", temp.creature_id, i);
+                sLog.outErrorEventAI("Creature %u are using event %u with more than 101 percent chance. Adjusting to 100 percent.", temp.creature_id, i);
                 temp.event_chance = 100;
             }
 
